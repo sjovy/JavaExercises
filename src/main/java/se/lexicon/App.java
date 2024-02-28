@@ -2,6 +2,9 @@ package se.lexicon;
 
 import java.util.Scanner;
 
+import java.util.Random;
+
+
 /**
  * Hello world!
  */
@@ -68,7 +71,7 @@ public class App {
         String name = scanner.nextLine();
         System.out.println("Hello " + name);
 
-        // Exercise 6: Input two numbers and print the sum/multiplication/division and subtraction
+        // Exercise 6: Input two numbers and print the addition, subtraction, multiplication and division
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first number: ");
         double num1 = scanner.nextDouble();
@@ -78,7 +81,7 @@ public class App {
         System.out.println("Difference: " + (num1 - num2));
         System.out.println("Product: " + (num1 * num2));
         System.out.println("Quotient: " + (num1 / num2));
-        */
+
 
         // Exercise 7: Input seconds and converts to hours, minutes and seconds, separated by ":"
         Scanner scanner = new Scanner(System.in);
@@ -89,10 +92,49 @@ public class App {
         int remainingSeconds = seconds % 60;
         System.out.println(hours + ":" + minutes + ":" + remainingSeconds);
 
+        */
 
-
-
-
+        // Exercise 8: Random number guessing game
+        // import of import java.util.Random at top of file
+        Scanner scanner = new Scanner(System.in);
+        Random randomizer = new Random();
+        int randomNum = randomizer.nextInt(500) + 1;
+        int guess;
+        int count = 0;
+        do {
+            System.out.println("Enter your guess: ");
+            guess = scanner.nextInt();
+            count++;
+            if (guess > randomNum) {
+                System.out.println("Too high");
+            } else if (guess < randomNum) {
+                System.out.println("Too low");
+            }
+        } while (guess != randomNum);
+        System.out.println("Congratulations! You guessed the number in " + count + " tries");
 
     }
+    /* Didn't get  this to work
+    public static void guessingGame(){
+        // Exercise 8: Random number guessing game
+        // import of import java.util.Random at top of file
+        Scanner scanner = new Scanner(System.in);
+        Random randomizer = new Random();
+        int randomNum = randomizer.nextInt(500) + 1;
+        int guess;
+        int count = 0;
+        do {
+            System.out.println("Enter your guess: ");
+            guess = scanner.nextInt();
+            count++;
+            if (guess > randomNum) {
+                System.out.println("Too high");
+            } else if (guess < randomNum) {
+                System.out.println("Too low");
+            }
+        } while (guess != randomNum);
+        System.out.println("Congratulations! You guessed the number in " + count + " tries");
+    }
+
+      */
 }
