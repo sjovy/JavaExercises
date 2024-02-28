@@ -5,34 +5,44 @@ package se.lexicon;
  */
 public class App {
     public static void main(String[] args) {
-        // System.out.println( "Hello World!" );
 
+        // Exercise 1: Print out "Hello Thomas" on two lines
         String word1 = "Hello";
         String word2 = "Thomas";
-        System.out.print(word1);
-        System.out.println(word2);
+        // System.out.println(word1 + "\n" + word2);
 
-        // Method to check if a year is a leap year
+        /*
+        // Exercise 2: Check if a year is a leap year
         int year;
-        boolean isLeapYear = false;
-
-        year = 2020;
-        private static boolean isLeapYear(year) {
-            // Leap years are divisible by 4
-            // However, years divisible by 100 are not leap years unless they are also divisible by 400
-            if ( (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) )
-
-                ;
+        year = 2021;
+        if ( (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) ){
+            System.out.println(year + " is a leap year");
+        } else {
+            System.out.println(year + " is not a leap year");
         }
+        */
 
-
-        double num1, num2, num3;
+        // Exercise 3: Print out the sum, difference, product and quotient of two numbers
+        double num1, num2;
         num1 = 10;
         num2 = 33;
-        num3 = num1 + num2;
-
-
-
-        // System.out.println(num3);
+        for (int i = 1; i <= 4; i++) {
+            switch (i) {
+                case 1:
+                    System.out.println(num1 + num2);
+                    break;
+                case 2:
+                    System.out.println(num1 - num2);
+                    break;
+                case 3:
+                    System.out.println(num1 * num2);
+                    break;
+                case 4:
+                    System.out.println(num1 / num2);
+                    break;
+                default:
+                    System.out.println("N/A");
+            }
+        }
     }
 }
